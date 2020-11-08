@@ -1,0 +1,19 @@
+<%- include ("partials/header") %> 
+<link rel="stylesheet" type="text/css" href="/css/stylecresults.css">
+</head>
+<body>
+	<div class="container-fluid" id="div5">
+		<ul> <h1> <%= c.Country %></h1>
+			<li><strong> Date and Time : </strong><%=  c.Date.substring(0,10).split("-").reverse().join("-",2)%> (<%= c.Date.substring(11,19) %>) </li>
+			<li><strong> Total Cases : </strong><%= (c.TotalConfirmed + c.TotalDeaths + c.TotalRecovered).toFixed(0)%></li>
+			<li><strong> New Confirmed : </strong><%= c.NewConfirmed %></li>
+			<li><strong> Total Confirmed : </strong><%= c.TotalConfirmed %></li>
+			<li><strong> New Deaths : </strong><%= c.NewDeaths %></li>
+			<li><strong> Total Deaths : </strong><%= c.TotalDeaths %></li>
+			<li><strong> New Recovered : </strong><%= c.NewRecovered %></li>
+			<li><strong> Total Recovered : </strong><%= c.TotalRecovered %></li>
+		</ul>
+	</div>
+
+<%- include ("partials/footer") %> 
+

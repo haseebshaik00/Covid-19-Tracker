@@ -1,0 +1,23 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app.js"
+  },
+  
+  "author": "Haseeb Rahman",
+  "license": "ISC",
+  
+  "dependencies": {
+    "date-format": "^3.0.0",
+    "dateformat": "^3.0.3",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "request": "^2.88.2"
+  }
+}

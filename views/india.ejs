@@ -1,0 +1,44 @@
+<%- include ("partials/header") %> 
+
+<link rel="stylesheet" type="text/css" href="/css/styleindia.css">
+</head>
+<body>
+
+<div class="container mb-5" id="cresults"> 
+<h1 id="h1">India's Stats as of <%= f.substring(0,10).split("-").reverse().join("-",2) %> (<%= f.substring(11,19); %>)</h1>
+
+<div id="div1">
+    <strong> <ul>Total Stats</strong>
+    	<li><strong> Total Cases : </strong><%= (e.total + e.deaths + e.discharged).toFixed(0)%></li>
+    	<li><strong> Confirmed Cases : </strong><%= e.total %></li>
+    	<li><strong> Total Deaths : </strong><%= e.deaths %></li>
+    	<li><strong> Total Recovered : </strong><%= e.discharged %></li>
+    </ul>
+</div>
+
+<div id="div2">
+    <table class=" table1">
+        <tr class="p-1" id="tr1">
+            <th class="pl-3">State</th>
+            <th class="text-center">Total Cases</th>
+            <th class="text-center">Confirmed Cases</th>
+            <th class="text-center">Total Deaths</th>
+            <th class="text-center">Total Recovered</th>
+        </tr>
+
+        <% d.forEach(function(d){ %>
+        	<tr>
+            <td class="pl-3"><%= d.loc %> %></td>
+            <td class="text-center"><%= (d.totalConfirmed + d.deaths + d.discharged).toFixed(0)%></td>
+            <td class="text-center"><%= d.totalConfirmed %></td>
+            <td class="text-center"><%= d.deaths %></td>
+            <td class="text-center"><%= d.discharged %></td>
+          </tr>
+        <% }); %>
+    </table>
+</div>
+
+</div>
+
+<%- include ("partials/footer") %> 
+

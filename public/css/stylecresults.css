@@ -1,0 +1,44 @@
+body
+{
+	background-color: #232323;
+	font-family:"Lato", sans-serif;
+	background-image: url("/images/9.jpg");
+	background-size: cover;
+}
+
+h1
+{
+	background-color: grey;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal; 
+}
+
+ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li
+{
+	background-color: #fff;
+	height: 35px;
+	padding-left: 5px;
+	line-height: 35px;
+}
+
+li:nth-child(2n)
+{
+	background-color: lightgrey;
+}
+
+#div5{
+	margin-top: 180px;
+	width: 85%;
+	border-radius: 10px;
+}

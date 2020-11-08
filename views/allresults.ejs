@@ -1,0 +1,33 @@
+<%- include ("partials/header") %> 
+<link rel="stylesheet" type="text/css" href="/css/styleall.css">
+</head>
+<body>
+
+<div class="container mb-4" id="div1">
+    <h6 id="h6"> Country wise Stats as of <%= d[0].Date.substring(0,10).split("-").reverse().join("-",2) %> (<%= d[0].Date.substring(11,19) %>)
+    </h6>
+
+    <div id="div2">
+        <table id="t1">
+                <tr class="mt-5 tr1">
+                    <th class="p-1" id="tr1">Country</th>
+                    <th class="p-1 text-center" >Total Cases</th>
+                    <th class="p-1 text-center" >Confirmed Cases</th>
+                    <th class="p-1 text-center" >Total Deaths</th>
+                    <th class="p-1 text-center" >Total Recovered</th>
+                </tr>
+
+            <% d.forEach(function(d){ %>
+            	<tr id="tr2">
+                <td class="pl-3"><%= d.Country %> %></td>
+                <td class="text-center"><%= (d.TotalDeaths + d.NewConfirmed + d.TotalRecovered).toFixed(0)%></td>
+                <td class="text-center"><%= d.NewConfirmed %></td>
+                <td class="text-center"><%= d.TotalDeaths %></td>
+                <td class="text-center"><%= d.TotalRecovered %></td>
+              </tr>
+            <% }); %>
+        </table>
+    </div>
+</div>
+
+<%- include ("partials/footer") %> 

@@ -1,0 +1,47 @@
+body{
+	background-color: #232323;
+	font-family:"Lato", sans-serif;
+	font-size: 20px;
+	background-image: url("/images/9.jpg");
+	background-size: cover;
+	color: white;
+	font-size: 100%;
+	background-attachment: fixed;
+}
+
+#div1{
+	margin-top:40px;
+}
+
+#h6{
+	padding: 10px;
+	background-color : grey;
+	font-size: 20px;
+}
+
+#div2{
+	margin-top: 20px;
+}
+
+#t1{
+	width: 100%	
+}
+
+.tr1 {
+	background-color: grey;
+	font-weight: lighter;
+	width: 100%;
+	font-size: 20px;
+}
+
+#tr2:nth-child(odd){
+	padding: 15px;
+	background-color: white;
+	color: black;
+}
+
+#tr2:nth-child(even){
+	padding: 15px;
+	background-color: lightgrey;
+	color: black;
+}
